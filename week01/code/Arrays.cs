@@ -6,6 +6,14 @@ public static class Arrays
     /// integer greater than 0.
     /// </summary>
     /// <returns>array of doubles that are the multiples of the supplied number</returns>
+    /// 
+  // ---------- Part 1: MultiplesOf ----------
+    // Plan:
+    // 1. Create a new array of type double with length = count.
+    // 2. Loop from i = 0 to count - 1.
+    // 3. For each index i, the value is start * (i + 1).
+    // 4. Store that value in the array at index i.
+    // 5. Return the completed array.
     public static double[] MultiplesOf(double number, int length)
     {
         double[] result = new double[length];
@@ -29,6 +37,14 @@ public static class Arrays
     ///
     /// Because a list is dynamic, this function will modify the existing data list rather than returning a new list.
     /// </summary>
+      // ---------- Part 2: RotateListRight ----------
+    // Plan:
+    // 1. Get the length of the list (data.Count).
+    // 2. Normalize "amount" using modulo
+    //    (rotating by the full length and give back the same list).
+    // 3. The last "amount" elements  to move to the front.
+    // 4. Build a new list: the "tail" part first, then the "front" part.
+    // 5. Return the new rotated list.
     public static void RotateListRight(List<int> data, int amount)
     {
         int n = data.Count;
